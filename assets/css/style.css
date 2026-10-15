@@ -1,0 +1,847 @@
+/* 
+ * - Custom Styles
+ * ملف الأنماط المخصصة للموقع
+ */
+
+/* ========================================
+   0. Local Fonts Setup (Cairo & Tajawal)
+======================================== */
+@font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url('../fonts/cairo-arabic.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFE;
+}
+
+@font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url('../fonts/cairo-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url('../fonts/cairo-arabic.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFE;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 200 1000;
+    font-display: swap;
+    src: url('../fonts/cairo-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ========================================
+   1. Base Styles & RTL Adjustments
+======================================== */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .space-x-reverse> :not([hidden])~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+}
+
+/* ========================================
+   2. Animations & Transitions
+======================================== */
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Content Animation */
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulse Animation for CTA Buttons */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.animate-pulse-custom {
+    animation: pulse 3s infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* ========================================
+   3. Navigation Styles
+======================================== */
+
+/* Sticky Navbar with Background - Always Dark by Default */
+#navbar {
+    background-color: #0f172a !important;
+    background: #0f172a !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease;
+}
+
+#navbar a {
+    text-decoration: none !important;
+}
+
+#navbar.scrolled {
+    background-color: #0b1120 !important;
+    background: #0b1120 !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    background-color: #0f172a !important;
+    border: 1px solid #1e293b !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+}
+
+#mobile-menu.hidden {
+    display: none !important;
+}
+
+#mobile-menu:not(.hidden) {
+    display: block !important;
+}
+
+/* Services Desktop Dropdown */
+.services-dropdown-menu {
+    background-color: #0f172a !important;
+    background: #0f172a !important;
+    border: 1px solid #1e293b !important;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7) !important;
+    z-index: 100 !important;
+}
+
+.services-dropdown-menu a {
+    color: #e2e8f0 !important;
+    text-decoration: none !important;
+}
+
+.services-dropdown-menu a:hover {
+    background-color: #ea580c !important;
+    color: #ffffff !important;
+}
+
+/* ========================================
+   4. Card Hover Effects
+======================================== */
+
+.service-card,
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================
+   5. FAQ Accordion Styles
+======================================== */
+
+.faq-item .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-item .faq-answer.show {
+    max-height: 500px;
+    padding-bottom: 1.5rem;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+/* ========================================
+   6. Gallery Carousel Styles
+======================================== */
+
+#gallery-carousel {
+    transition: transform 0.5s ease-out;
+}
+
+.carousel-indicator {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator:hover {
+    transform: scale(1.2);
+}
+
+.carousel-indicator.active {
+    width: 2rem;
+    background-color: #F59E0B;
+}
+
+/* ========================================
+   7. Modal Styles
+======================================== */
+
+#contact-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#contact-modal>div {
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Focus Trap for Modal */
+#contact-modal.show {
+    display: flex !important;
+}
+
+/* ========================================
+   8. Form Styles
+======================================== */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #F59E0B;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+input[type="checkbox"]:checked {
+    background-color: #F59E0B;
+    border-color: #F59E0B;
+}
+
+/* ========================================
+   9. Price Calculator Result Animation
+======================================== */
+
+#price-result {
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   10. Toast Notification
+======================================== */
+
+#success-toast {
+    animation: slideInRight 0.5s ease-out;
+}
+
+#success-toast.show {
+    display: flex !important;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   11. Floating WhatsApp Button
+======================================== */
+
+.fixed.bottom-6.left-6 {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ========================================
+   12. Progress Line Animation
+======================================== */
+
+#progress-line {
+    transition: width 1s ease-out;
+}
+
+/* ========================================
+   13. Responsive Utilities
+======================================== */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F59E0B;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+}
+
+/* ========================================
+   14. Loading States
+======================================== */
+
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #F59E0B;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   15. Print Styles
+======================================== */
+
+@media print {
+
+    #navbar,
+    .fixed.bottom-6,
+    #contact-modal,
+    #success-toast {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   16. Accessibility Improvements
+======================================== */
+
+/* Focus Visible for Keyboard Navigation */
+*:focus-visible {
+    outline: 3px solid #F59E0B;
+    outline-offset: 2px;
+}
+
+/* Skip to Main Content Link */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: #F59E0B;
+    color: white;
+    text-decoration: none;
+}
+
+.skip-to-main:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+/* Reduced Motion for Users Who Prefer It */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ========================================
+   17. High Contrast Mode Support
+======================================== */
+
+@media (prefers-contrast: high) {
+    .bg-primary {
+        background-color: #005073 !important;
+    }
+
+    .text-primary {
+        color: #005073 !important;
+    }
+}
+
+/* ========================================
+   18. Dark Mode Support (Optional)
+======================================== */
+
+@media (prefers-color-scheme: dark) {
+    /* Add dark mode styles if needed */
+}
+
+/* ========================================
+   19. Mobile Optimizations
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* Larger touch targets for mobile */
+    button,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Better spacing on mobile */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* ========================================
+   20. Performance Optimizations
+======================================== */
+
+/* GPU Acceleration for Smooth Animations */
+.fade-in,
+.service-card,
+.hero-content,
+#gallery-carousel {
+    will-change: transform, opacity;
+}
+
+/* Lazy Load Images Placeholder */
+img[loading="lazy"] {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ========================================
+   21. Utility Classes
+======================================== */
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.drop-shadow-custom {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #111826 0%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   22. Custom Grid Layouts
+======================================== */
+
+.grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* ========================================
+   23. Safe Area Support (for mobile notches)
+======================================== */
+
+@supports (padding: env(safe-area-inset-left)) {
+    body {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
+
+/* ========================================
+   24. Custom Borders & Decorations
+======================================== */
+
+.border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(135deg, #111826, #F59E0B) border-box;
+}
+
+/* ========================================
+   25. Service Icons Animation
+======================================== */
+
+.service-card i {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ========================================
+   26. Theme Utility Tokens & Components
+======================================== */
+
+/* Sticky Sidebar & Nav */
+.sticky-sidebar {
+    position: sticky;
+    top: 90px;
+}
+
+.content-section {
+    scroll-margin-top: 100px;
+}
+
+.hero-pattern {
+    background: linear-gradient(135deg, #111826 0%, #1e2a4a 50%, #0a0f1c 100%);
+}
+
+.nav-item {
+    transition: all 0.3s ease;
+    border-right: 4px solid transparent;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: rgba(250, 117, 22, 0.1);
+    border-right-color: #fa7516;
+    color: #fa7516;
+}
+
+.service-card {
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-top-color: #fa7516;
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq-content.active {
+    max-height: 500px;
+}
+
+.testimonial-card {
+    background: #f8fafc;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-right: 4px solid #fa7516;
+}
+
+.testimonial-card .stars {
+    color: #f59e0b;
+}
+
+/* Mega Dropdown Clean Styling */
+.services-dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    min-width: 480px !important;
+    width: 480px !important;
+    max-width: 90vw !important;
+    white-space: nowrap !important;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    position: absolute;
+    top: 100% !important;
+    margin-top: 4px !important;
+}
+
+/* Invisible hover bridge to prevent menu closing when cursor moves down */
+.services-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 15px;
+    background: transparent;
+}
+
+.services-dropdown-menu a {
+    white-space: nowrap !important;
+}
+
+.services-dropdown-wrapper:hover .services-dropdown-menu,
+.services-dropdown-wrapper:focus-within .services-dropdown-menu,
+.group:hover .services-dropdown-menu {
+    display: grid !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+
+
+/* Floating Action Buttons */
+.float-call,
+.float-whatsapp {
+    position: fixed;
+    left: 20px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.float-call {
+    bottom: 95px;
+    background: #007bff;
+    color: #fff;
+}
+
+.float-whatsapp {
+    bottom: 25px;
+    background: #25d366;
+    color: #fff;
+}
+
+.float-call:hover,
+.float-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* Index Page Mobile & Utility Overrides */
+@media (max-width: 1023px) {
+  #home .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #home h1 {
+    margin-top: 0.5rem;
+  }
+
+  #home .gap-8 {
+    gap: 1.5rem;
+  }
+}
+
+/* ========================================
+   27. Feature Cards & Testimonials Animations
+======================================== */
+.feature-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+.feature-card:nth-child(5) { animation-delay: 0.5s; }
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 2px;
+  background: linear-gradient(45deg, #f97316, #940104);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::before {
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+}
+
+.absolute.top-20 {
+  animation: float 10s ease-in-out infinite;
+}
+
+.absolute.bottom-20 {
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.text-yellow-400 i,
+.text-yellow-300 i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.group:hover .text-yellow-400 i,
+.group:hover .text-yellow-300 i {
+  transform: scale(1.1);
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* End of Custom Styles */

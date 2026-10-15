@@ -1,0 +1,80 @@
+RewriteEngine On
+
+# 301 Redirects for Removed AC Pages (SEO Recovery)
+Redirect 301 /ac-services/ https://alkaleej-moving.com/services/
+Redirect 301 /ac-services/air-conditioning-maintenance/ https://alkaleej-moving.com/
+Redirect 301 /ac-services/freon-charging-and-leak-detection/ https://alkaleej-moving.com/
+Redirect 301 /air-conditioner-cleaning-and-maintenance/ https://alkaleej-moving.com/
+Redirect 301 /air-conditioner-dismantling-and-installation/ https://alkaleej-moving.com/ikea-furniture-assembly-in-riyadh/
+Redirect 301 /copper-extension-and-freon-charging/ https://alkaleej-moving.com/
+Redirect 301 /blogs/moving-furniture-with-ac-installation-riyadh/ https://alkaleej-moving.com/furniture-disassembly-assembly-riyadh/
+
+# 410 Gone for Permanently Deleted Pages (SEO Permanent Removal Signal to Google)
+Redirect 410 /blogs/cheapest-furniture-moving-company-in-riyadh/
+Redirect 410 /blogs/furniture-assembly-carpenter-riyadh/
+Redirect 410 /blogs/furniture-moving-dismantling-and-assembly-in-riyadh/
+Redirect 410 /blogs/furniture-moving-prices-riyadh-2026/
+Redirect 410 /blogs/اسعار-نقل-العفش-في-الرياض/
+Redirect 410 /services/bedroom-disassembly-installation/
+Redirect 410 /services/furniture-moving-within-riyadh/
+Redirect 410 /areas/south-riyadh/
+Redirect 410 /areas/hayu-almonsiya/
+Redirect 410 /areas/hayu-qurtuba/
+
+# 301 Redirects for Cannibalized / Merged Legacy Pages
+Redirect 301 /furniture-moving-company-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /furniture-moving-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /furniture-moving-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /moving-companies-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /furniture-moving-north-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /naql-athath-alriyad/ https://alkaleej-moving.com/
+Redirect 301 /blogs/best-furniture-moving-company-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/best-furniture-moving-company-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/best-furniture-moving-companies-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/furniture-moving-company-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/riyadh-furniture-moving-company/ https://alkaleej-moving.com/
+Redirect 301 /blogs/furniture-moving-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/cheap-furniture-moving-riyadh/ https://alkaleej-moving.com/cheap-furniture-moving-riyadh/
+Redirect 301 /blogs/best-furniture-storage-company-in-riyadh/ https://alkaleej-moving.com/furniture-storage-in-riyadh/
+Redirect 301 /blogs/furniture-storage-company-riyadh/ https://alkaleej-moving.com/furniture-storage-in-riyadh/
+
+# توحيد النطاق إلى HTTPS وبدون WWW في خطوة واحدة
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://alkaleej-moving.com/$1 [L,R=301]
+
+# حذف index.html
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule (.*)index\.html$ /$1 [R=301,L]
+
+# تحويل الى https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://alkaleej-moving.com/$1 [R=301,L]
+
+# منع عرض الملفات
+Options -Indexes
+
+# ضغط الموقع
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# الكاش
+<IfModule mod_expires.c>
+ExpiresActive On
+
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType image/webp "access 1 year"
+
+ExpiresByType text/css "access 1 month"
+ExpiresByType application/javascript "access 1 month"
+
+ExpiresByType text/html "access 1 hour"
+</IfModule>
+
+# حماية الملفات
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh)$">
+Require all denied
+</FilesMatch>

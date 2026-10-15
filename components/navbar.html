@@ -1,0 +1,86 @@
+<!-- Navigation -->
+<nav class="fixed w-full top-0 z-40 transition-all duration-300 bg-[#0f172a] shadow-lg" id="navbar" style="background-color: #0f172a !important;">
+  <div class="container mx-auto px-6 lg:px-12 py-3.5">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-reverse space-x-3 no-underline">
+        <div class="bg-primary text-white w-14 h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center text-2xl font-bold shadow-md">
+          <img src="/assets/img/gulf.webp" width="64" height="64" class="rounded-full w-full h-full object-cover"
+            alt="شعار شركة الخليج لنقل العفش بالرياض" loading="eager" fetchpriority="high" decoding="async" />
+        </div>
+        <div>
+          <span class="text-xl lg:text-2xl font-bold text-white drop-shadow-lg block">
+            الخليج
+          </span>
+          <p class="text-xs text-white/90 drop-shadow-md">
+            نقل وتغليف الأثاث
+          </p>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center space-x-reverse space-x-7" id="desktop-menu">
+        <a href="/" data-nav="home"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">الرئيسية</a>
+        <a href="/about/" data-nav="about"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">من نحن</a>
+        <a href="/services/" data-nav="services"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">خدماتنا</a>
+        <a href="/prices/" data-nav="prices"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">الأسعار</a>
+        <a href="/blogs/" data-nav="blogs"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">المدونة</a>
+        <a href="/areas/" data-nav="areas"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">أحياء الرياض</a>
+        <a href="/#how-it-works"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">كيف نعمل</a>
+        <a href="/#testimonials"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">آراء العملاء</a>
+        <a href="/#faq"
+          class="text-white hover:text-secondary transition-colors duration-200 font-medium drop-shadow-md no-underline">الأسئلة الشائعة</a>
+      </div>
+
+      <!-- CTA Button & Phone -->
+      <div class="hidden lg:flex items-center space-x-reverse space-x-4">
+        <a href="tel:+966503430106"
+          class="text-white hover:text-secondary transition-colors flex items-center space-x-reverse space-x-2 drop-shadow-md no-underline" dir="ltr">
+          <i class="fas fa-phone"></i>
+          <span class="font-semibold">0503430106</span>
+        </a>
+        <button onclick="if(typeof openContactModal==='function'){openContactModal()}else{window.location.href='/contact/'}"
+          class="bg-secondary hover:bg-secondary/90 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
+          احجز الآن
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none p-2 rounded-lg hover:bg-white/10" aria-label="فتح قائمة التنقل" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 space-y-3 bg-[#0f172a] rounded-2xl p-5 shadow-2xl border border-slate-700" style="background-color: #0f172a !important;">
+      <a href="/" data-nav="home" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">الرئيسية</a>
+      <a href="/about/" data-nav="about" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">من نحن</a>
+      <a href="/services/" data-nav="services" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">خدماتنا</a>
+      <a href="/prices/" data-nav="prices" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">الأسعار</a>
+      <a href="/blogs/" data-nav="blogs" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">المدونة</a>
+      <a href="/areas/" data-nav="areas" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">أحياء الرياض</a>
+      <a href="/#how-it-works" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">كيف نعمل</a>
+      <a href="/#testimonials" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">آراء العملاء</a>
+      <a href="/#faq" class="block text-white hover:text-secondary transition-colors py-2 no-underline border-b border-white/5">الأسئلة الشائعة</a>
+
+      <div class="pt-2 space-y-3">
+        <a href="tel:+966503430106" class="flex items-center justify-center gap-2 bg-white/10 text-white hover:text-secondary transition-colors py-2.5 rounded-lg no-underline font-semibold" dir="ltr">
+          <i class="fas fa-phone"></i>
+          <span>0503430106</span>
+        </a>
+        <button onclick="if(typeof openContactModal==='function'){openContactModal()}else{window.location.href='/contact/'}"
+          class="w-full bg-secondary hover:bg-secondary/90 text-white py-3 rounded-lg font-semibold shadow-md transition-colors">
+          احجز الآن
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

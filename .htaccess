@@ -1,0 +1,91 @@
+RewriteEngine On
+
+# 301 Redirects for Removed AC Pages (SEO Recovery)
+Redirect 301 /ac-services/ https://alkaleej-moving.com/services/
+Redirect 301 /ac-services/air-conditioning-maintenance/ https://alkaleej-moving.com/
+Redirect 301 /ac-services/freon-charging-and-leak-detection/ https://alkaleej-moving.com/
+Redirect 301 /air-conditioner-cleaning-and-maintenance/ https://alkaleej-moving.com/
+Redirect 301 /air-conditioner-dismantling-and-installation/ https://alkaleej-moving.com/ikea-furniture-assembly-in-riyadh/
+Redirect 301 /copper-extension-and-freon-charging/ https://alkaleej-moving.com/
+Redirect 301 /blogs/moving-furniture-with-ac-installation-riyadh/ https://alkaleej-moving.com/furniture-disassembly-assembly-riyadh/
+
+# 410 Gone for Permanently Deleted Pages (No Suitable Alternatives)
+Redirect 410 /blogs/furniture-moving-dismantling-and-assembly-in-riyadh/
+Redirect 410 /areas/hayu-qurtuba/
+
+# 301 Redirects for Migrated Pages (SEO Recovery & Value Preservation)
+Redirect 301 /blogs/furniture-assembly-carpenter-riyadh/ https://alkaleej-moving.com/blogs/best-furniture-carpenter-in-riyadh/
+Redirect 301 /blogs/cheapest-furniture-moving-company-in-riyadh/ https://alkaleej-moving.com/cheap-furniture-moving-riyadh/
+Redirect 301 /services/bedroom-disassembly-installation/ https://alkaleej-moving.com/furniture-disassembly-assembly-riyadh/
+Redirect 301 /services/furniture-moving-within-riyadh/ https://alkaleej-moving.com/best-furniture-moving-company-riyadh/
+Redirect 301 /blogs/اسعار-نقل-العفش-في-الرياض/ https://alkaleej-moving.com/prices/
+Redirect 301 /blogs/%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1-%D9%86%D9%82%D9%84-%D8%A7%D9%84%D8%B9%D9%81%D8%B4-%D9%81%D9%8A-%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6/ https://alkaleej-moving.com/prices/
+Redirect 301 /blogs/furniture-moving-prices-in-riyadh/ https://alkaleej-moving.com/prices/
+Redirect 301 /blogs/furniture-moving-prices-riyadh-2026/ https://alkaleej-moving.com/prices/
+Redirect 301 /areas/south-riyadh/ https://alkaleej-moving.com/areas/
+Redirect 301 /areas/east-riyadh/ https://alkaleej-moving.com/east-riyadh-moving/
+Redirect 301 /blog/protect-the-furniture-during-transport/ https://alkaleej-moving.com/blogs/how-to-protect-your-furniture-during-transport/
+Redirect 301 /warehouse-transportation-in-riyadh/ https://alkaleej-moving.com/warehouse-relocation-in-riyadh/
+Redirect 301 /areas/hayu-almalaqa/ https://alkaleej-moving.com/areas/hayu-almalqa/
+Redirect 301 /blogs/blogs/ https://alkaleej-moving.com/blogs/
+Redirect 301 /areas/blogs/ https://alkaleej-moving.com/blogs/
+Redirect 301 /articles/ https://alkaleej-moving.com/blogs/
+Redirect 301 /areas/about/ https://alkaleej-moving.com/about/
+
+# 301 Redirects for Cannibalized / Merged Legacy Pages
+Redirect 301 /furniture-moving-company-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /furniture-moving-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /furniture-moving-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /moving-companies-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /furniture-moving-north-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /naql-athath-alriyad/ https://alkaleej-moving.com/
+Redirect 301 /blogs/best-furniture-moving-company-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/best-furniture-moving-company-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/best-furniture-moving-companies-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/furniture-moving-company-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/riyadh-furniture-moving-company/ https://alkaleej-moving.com/
+Redirect 301 /blogs/furniture-moving-in-riyadh/ https://alkaleej-moving.com/
+Redirect 301 /blogs/cheap-furniture-moving-riyadh/ https://alkaleej-moving.com/cheap-furniture-moving-riyadh/
+Redirect 301 /blogs/best-furniture-storage-company-in-riyadh/ https://alkaleej-moving.com/furniture-storage-in-riyadh/
+Redirect 301 /blogs/furniture-storage-company-riyadh/ https://alkaleej-moving.com/furniture-storage-in-riyadh/
+
+# توحيد النطاق إلى HTTPS وبدون WWW في خطوة واحدة
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://alkaleej-moving.com/$1 [L,R=301]
+
+# حذف index.html
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule (.*)index\.html$ /$1 [R=301,L]
+
+# تحويل الى https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://alkaleej-moving.com/$1 [R=301,L]
+
+# منع عرض الملفات
+Options -Indexes
+
+# ضغط الموقع
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+
+# الكاش
+<IfModule mod_expires.c>
+ExpiresActive On
+
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType image/webp "access 1 year"
+
+ExpiresByType text/css "access 1 month"
+ExpiresByType application/javascript "access 1 month"
+
+ExpiresByType text/html "access 1 hour"
+</IfModule>
+
+# حماية الملفات
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh)$">
+Require all denied
+</FilesMatch>
