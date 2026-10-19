@@ -20,6 +20,8 @@
     { name: "نقل مستودعات بالرياض", path: "/warehouse-relocation-in-riyadh/" },
     { name: "أفضل شركة نقل عفش الرياض", path: "/best-furniture-moving-company-riyadh/" },
     { name: "فك وتركيب غرف النوم", path: "/furniture-disassembly-assembly-riyadh/" },
+    { name: "نقل وتركيب مطابخ بالرياض", path: "/kitchen-moving-riyadh/" },
+    { name: "ونش رفع أثاث بالرياض", path: "/crane-furniture-lifting-riyadh/" },
     { name: "نقل عفش فلل بالرياض", path: "/services/villa-furniture-moving-in-riyadh/" },
     { name: "نقل عفش شرق الرياض", path: "/east-riyadh-moving/" },
     { name: "نقل عفش غرب الرياض", path: "/west-riyadh-moving/" }
