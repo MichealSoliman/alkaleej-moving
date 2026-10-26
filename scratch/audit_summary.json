@@ -1,0 +1,407 @@
+[
+  {
+    "file": "about\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "about\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "areas\\hayu-almonsiya\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/img/icon.png\" -> resolved to non-existent: assets\\img\\icon.png"
+  },
+  {
+    "file": "areas\\hayu-hatayn\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/img/hayu-hatayn.webp\" -> resolved to non-existent: assets\\img\\hayu-hatayn.webp"
+  },
+  {
+    "file": "areas\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "areas\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"${item.link}\" -> resolved to non-existent: areas\\${item.link}"
+  },
+  {
+    "file": "areas\\north-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../south-riyadh-moving/\" -> resolved to non-existent: areas\\south-riyadh-moving"
+  },
+  {
+    "file": "areas\\riyadh-to-dammam\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/img/riyadh-to-dammam.webp\" -> resolved to non-existent: assets\\img\\riyadh-to-dammam.webp"
+  },
+  {
+    "file": "blogs\\furniture-packing-materials\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/blogs/moving-furniture-with-ac-installation-riyadh/\" -> resolved to non-existent: blogs\\moving-furniture-with-ac-installation-riyadh"
+  },
+  {
+    "file": "blogs\\how-to-choose-a-reliable-moving-company-in-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "blogs\\how-to-protect-your-furniture-during-transport\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../assets/img/how-to-protect-your-furniture-during-transport.webp\" -> resolved to non-existent: blogs\\assets\\img\\how-to-protect-your-furniture-during-transport.webp"
+  },
+  {
+    "file": "blogs\\how-to-protect-your-furniture-during-transport\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/blogs/moving-furniture-with-ac-installation-riyadh/\" -> resolved to non-existent: blogs\\moving-furniture-with-ac-installation-riyadh"
+  },
+  {
+    "file": "blogs\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "blogs\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "blogs\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"${hood.img}\" -> resolved to non-existent: blogs\\${hood.img}"
+  },
+  {
+    "file": "blogs\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"${hood.link}\" -> resolved to non-existent: blogs\\${hood.link}"
+  },
+  {
+    "file": "blogs\\mistakes-when-moving-furniture\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../assets/img/blogs/mistakes-when-moving-furniture.webp\" -> resolved to non-existent: blogs\\assets\\img\\blogs\\mistakes-when-moving-furniture.webp"
+  },
+  {
+    "file": "blogs\\mistakes-when-moving-furniture\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/blogs/moving-furniture-with-ac-installation-riyadh/\" -> resolved to non-existent: blogs\\moving-furniture-with-ac-installation-riyadh"
+  },
+  {
+    "file": "blogs\\riyadh-neighborhoods-guide-for-furniture-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/blogs/moving-furniture-with-ac-installation-riyadh/\" -> resolved to non-existent: blogs\\moving-furniture-with-ac-installation-riyadh"
+  },
+  {
+    "file": "blogs\\the-best-time-to-move-furniture-in-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/blogs/moving-furniture-with-ac-installation-riyadh/\" -> resolved to non-existent: blogs\\moving-furniture-with-ac-installation-riyadh"
+  },
+  {
+    "file": "blogs\\tips-before-moving-furniture\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../assets/img/tips-before-moving-furniture.webp\" -> resolved to non-existent: blogs\\assets\\img\\tips-before-moving-furniture.webp"
+  },
+  {
+    "file": "blogs\\tips-before-moving-furniture\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/blogs/moving-furniture-with-ac-installation-riyadh/\" -> resolved to non-existent: blogs\\moving-furniture-with-ac-installation-riyadh"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "doctype",
+    "msg": "Missing or invalid <!DOCTYPE html>"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "structure",
+    "msg": "Missing <html"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "structure",
+    "msg": "Missing </html>"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "structure",
+    "msg": "Missing <head"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "structure",
+    "msg": "Missing </head>"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "structure",
+    "msg": "Missing <body"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "structure",
+    "msg": "Missing </body>"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "seo",
+    "msg": "Missing <title>"
+  },
+  {
+    "file": "components\\footer.html",
+    "type": "seo",
+    "msg": "Missing <h1> tag"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "doctype",
+    "msg": "Missing or invalid <!DOCTYPE html>"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "structure",
+    "msg": "Missing <html"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "structure",
+    "msg": "Missing </html>"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "structure",
+    "msg": "Missing <head"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "structure",
+    "msg": "Missing </head>"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "structure",
+    "msg": "Missing <body"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "structure",
+    "msg": "Missing </body>"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "seo",
+    "msg": "Missing <title>"
+  },
+  {
+    "file": "components\\navbar.html",
+    "type": "seo",
+    "msg": "Missing <h1> tag"
+  },
+  {
+    "file": "contact\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/south-riyadh-moving/\" -> resolved to non-existent: areas\\south-riyadh-moving"
+  },
+  {
+    "file": "crane-furniture-lifting-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/hayu-qurtuba/\" -> resolved to non-existent: areas\\hayu-qurtuba"
+  },
+  {
+    "file": "crane-furniture-lifting-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/west-riyadh/\" -> resolved to non-existent: areas\\west-riyadh"
+  },
+  {
+    "file": "crane-furniture-lifting-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/west-riyadh/\" -> resolved to non-existent: areas\\west-riyadh"
+  },
+  {
+    "file": "crane-furniture-lifting-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/south-riyadh/\" -> resolved to non-existent: areas\\south-riyadh"
+  },
+  {
+    "file": "crane-furniture-lifting-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/south-riyadh/\" -> resolved to non-existent: areas\\south-riyadh"
+  },
+  {
+    "file": "east-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/hayu-qurtuba/\" -> resolved to non-existent: areas\\hayu-qurtuba"
+  },
+  {
+    "file": "furniture-disassembly-assembly-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../north-riyadh-moving/\" -> resolved to non-existent: north-riyadh-moving"
+  },
+  {
+    "file": "furniture-disassembly-assembly-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../south-riyadh-moving/\" -> resolved to non-existent: south-riyadh-moving"
+  },
+  {
+    "file": "furniture-disassembly-assembly-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../central-riyadh-moving/\" -> resolved to non-existent: central-riyadh-moving"
+  },
+  {
+    "file": "index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "kitchen-moving-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../dist/output.css\" -> resolved to non-existent: ..\\dist\\output.css"
+  },
+  {
+    "file": "kitchen-moving-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/css/style.css\" -> resolved to non-existent: ..\\assets\\css\\style.css"
+  },
+  {
+    "file": "kitchen-moving-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/css/all.min.css\" -> resolved to non-existent: ..\\assets\\css\\all.min.css"
+  },
+  {
+    "file": "kitchen-moving-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/css/areas.css\" -> resolved to non-existent: ..\\assets\\css\\areas.css"
+  },
+  {
+    "file": "kitchen-moving-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/img/kitchen-moving-riyadh.webp\" -> resolved to non-existent: ..\\assets\\img\\kitchen-moving-riyadh.webp"
+  },
+  {
+    "file": "kitchen-moving-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/js/services-dropdown.js\" -> resolved to non-existent: ..\\assets\\js\\services-dropdown.js"
+  },
+  {
+    "file": "kitchen-moving-riyadh\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/js/components.js\" -> resolved to non-existent: ..\\assets\\js\\components.js"
+  },
+  {
+    "file": "prices\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/hayu-qurtuba/\" -> resolved to non-existent: areas\\hayu-qurtuba"
+  },
+  {
+    "file": "prices\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/south-riyadh/\" -> resolved to non-existent: areas\\south-riyadh"
+  },
+  {
+    "file": "prices\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../areas/west-riyadh/\" -> resolved to non-existent: areas\\west-riyadh"
+  },
+  {
+    "file": "services\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"/apple-touch-icon.png\" -> resolved to non-existent: apple-touch-icon.png"
+  },
+  {
+    "file": "services\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"${item.link}\" -> resolved to non-existent: services\\${item.link}"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../index.html\" -> resolved to non-existent: ..\\index.html"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../index.html\" -> resolved to non-existent: ..\\index.html"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../services/villa-furniture-moving-in-riyadh/\" -> resolved to non-existent: ..\\services\\villa-furniture-moving-in-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../moving-apartments-in-riyadh/\" -> resolved to non-existent: ..\\moving-apartments-in-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../furniture-disassembly-assembly-riyadh/\" -> resolved to non-existent: ..\\furniture-disassembly-assembly-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../furniture-packing-in-riyadh/\" -> resolved to non-existent: ..\\furniture-packing-in-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../office-transportation-in-riyadh/\" -> resolved to non-existent: ..\\office-transportation-in-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../furniture-disassembly-assembly-riyadh/\" -> resolved to non-existent: ..\\furniture-disassembly-assembly-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/img/furniture-packing-materials.webp\" -> resolved to non-existent: ..\\assets\\img\\furniture-packing-materials.webp"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/img/furniture-moving-dismantling-and-assembly-in-riyadh.webp\" -> resolved to non-existent: ..\\assets\\img\\furniture-moving-dismantling-and-assembly-in-riyadh.webp"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../assets/img/furniture-moving-truck-in-riyadh.webp\" -> resolved to non-existent: ..\\assets\\img\\furniture-moving-truck-in-riyadh.webp"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../areas/hayu-aleulya/\" -> resolved to non-existent: ..\\areas\\hayu-aleulya"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../areas/hayu-hatayn/\" -> resolved to non-existent: ..\\areas\\hayu-hatayn"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../areas/hayu-aleaqiq/\" -> resolved to non-existent: ..\\areas\\hayu-aleaqiq"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../areas/hayu-almalqa/\" -> resolved to non-existent: ..\\areas\\hayu-almalqa"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../areas/south-riyadh/\" -> resolved to non-existent: ..\\areas\\south-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../areas/north-riyadh/\" -> resolved to non-existent: ..\\areas\\north-riyadh"
+  },
+  {
+    "file": "west-riyadh-moving\\index.html",
+    "type": "broken_link",
+    "msg": "Broken resource or link: \"../../areas/\" -> resolved to non-existent: ..\\areas"
+  }
+]
