@@ -47,67 +47,83 @@
 
     <!-- Schema Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "MovingCompany",
+      "@id": "https://alkaleej-moving.com/#movingcompany",
+      "name": "شركة الخليج لنقل العفش بين المدن وأحياء الرياض",
+      "url": "https://alkaleej-moving.com/areas/",
+      "telephone": "+966503430106",
+      "logo": "https://alkaleej-moving.com/assets/img/gulf.webp",
+      "image": "https://alkaleej-moving.com/assets/img/furniture-moving-in-riyadh.webp",
+      "description": "شركة رائدة في نقل العفش بين المدن وجميع أحياء الرياض، توفر خدمات فك وتركيب وتغليف الأثاث وشحنه بسيارات دينا مجهزة.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "الرياض",
+        "addressLocality": "الرياض",
+        "addressRegion": "منطقة الرياض",
+        "addressCountry": "SA"
+      },
+      "areaServed": [
+        "الرياض",
+        "حي النرجس",
+        "حي الياسمين",
+        "حي الملقا",
+        "حي الصحافة",
+        "حي حطين",
+        "حي العقيق",
+        "حي العارض",
+        "حي القيروان",
+        "حي الربيع",
+        "حي العليا",
+        "حي الروضة",
+        "حي الخليج",
+        "حي إشبيلية",
+        "حي الرمال",
+        "حي النسيم",
+        "حي المونسية",
+        "جدة",
+        "الدمام",
+        "الخبر",
+        "القصيم",
+        "مكة المكرمة"
+      ],
+      "priceRange": "$"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "MovingCompany",
-          "@id": "https://alkaleej-moving.com/#movingcompany",
-          "name": "شركة الخليج لنقل العفش بين المدن وأحياء الرياض",
-          "url": "https://alkaleej-moving.com/areas/",
-          "telephone": "+966503430106",
-          "logo": "https://alkaleej-moving.com/assets/img/gulf.webp",
-          "image": "https://alkaleej-moving.com/assets/img/furniture-moving-in-riyadh.webp",
-          "description": "شركة رائدة في نقل العفش بين المدن وجميع أحياء الرياض، توفر خدمات فك وتركيب وتغليف الأثاث وشحنه بسيارات دينا مجهزة.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "الرياض",
-            "addressLocality": "الرياض",
-            "addressRegion": "الرياض",
-            "addressCountry": "SA"
-          },
-          "areaServed": [
-            "الرياض",
-            "حي النرجس",
-            "حي الياسمين",
-            "حي الملقا",
-            "حي الصحافة",
-            "حي حطين",
-            "حي العقيق",
-            "حي العارض",
-            "حي القيروان",
-            "حي الربيع",
-            "حي العليا",
-            "حي الروضة",
-            "حي الخليج",
-            "حي إشبيلية",
-            "حي الرمال",
-            "حي النسيم",
-            "حي المونسية",
-            "جدة",
-            "الدمام",
-            "الخبر",
-            "القصيم",
-            "مكة المكرمة",
-            "المدينة المنورة"
-          ],
-          "priceRange": "$$"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://alkaleej-moving.com/"
         },
         {
-          "@type": "WebPage",
-          "@id": "https://alkaleej-moving.com/areas/#webpage",
-          "url": "https://alkaleej-moving.com/areas/",
-          "name": "نقل العفش بين المدن وأحياء الرياض | شركة الخليج",
-          "isPartOf": {
-            "@type": "WebSite",
-            "@id": "https://alkaleej-moving.com/#website",
-            "url": "https://alkaleej-moving.com/",
-            "name": "شركة الخليج لنقل العفش بالرياض"
-          },
-          "description": "دليل خدمات نقل العفش بين المدن وكافة أحياء الرياض من شركة الخليج لنقل الأثاث."
+          "@type": "ListItem",
+          "position": 2,
+          "name": "دليل الأحياء ومناطق الخدمة",
+          "item": "https://alkaleej-moving.com/areas/"
         }
       ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alkaleej-moving.com/areas/#webpage",
+      "url": "https://alkaleej-moving.com/areas/",
+      "name": "نقل العفش بين المدن وأحياء الرياض | شركة الخليج",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://alkaleej-moving.com/#website",
+        "url": "https://alkaleej-moving.com/",
+        "name": "شركة الخليج لنقل العفش بالرياض"
+      },
+      "description": "دليل خدمات نقل العفش بين المدن وكافة أحياء الرياض من شركة الخليج لنقل وتغليف الأثاث."
     }
+  ]
+}
     </script>
 
     <!-- Local Tailwind CSS -->
@@ -365,7 +381,834 @@
 
             <!-- شبكة الكروت (الأيقونة + العنوان + النبذة + زر قراءة المزيد) -->
             <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-300">
-                <!-- الكروت مدمجة ومولدة ديناميكياً مع دعم الأرشفة الكاملة لمحركات البحث -->
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="intercity">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-route"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    نقل بين المدن
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/riyadh-to-jeddah/" class="hover:text-secondary transition-colors">نقل عفش من الرياض إلى جدة</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                شحن أثاث منزلك ومكتبك لمسافة 950 كم بسيارات دينا مقفلة مع الفك والتركيب والتغليف المزدوج وضمان وصول شامل.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/riyadh-to-jeddah/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="intercity">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-road"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    نقل بين المدن
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/riyadh-to-dammam/" class="hover:text-secondary transition-colors">نقل عفش من الرياض إلى الدمام والخبر</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                شحن سريع لمسافة 400 كم عبر طريق الدمام السريع لكافة مدن الشرقية (الدمام، الخبر، الظهران، الجبيل) مع حماية ضد الرطوبة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/riyadh-to-dammam/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="intercity">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-kaaba"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    نقل بين المدن
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/riyadh-to-makkah/" class="hover:text-secondary transition-colors">نقل عفش من الرياض لمكة المكرمة</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                خدمات شحن العفش من الرياض إلى مكة المكرمة مع تنظيم دقيق لفك وتغليف الأثاث الثقيل والأجهزة وضمان النقل الآمن.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/riyadh-to-makkah/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="intercity">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-600 to-orange-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-truck-arrow-right"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    نقل بين المدن
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/riyadh-to-qassim/" class="hover:text-secondary transition-colors">نقل عفش من الرياض إلى القصيم</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                نقل الأثاث المنزلي والمكتبي إلى بريدة وعنيزة وكافة محافظات القصيم بسيارات دينا مجهزة وأسعار اقتصادية تنافسية.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/riyadh-to-qassim/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-secondary to-amber-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    المركز اللوجستي
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/north-riyadh/" class="hover:text-secondary transition-colors">نقل عفش شمال الرياض</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                الدليل الشامل لنقل الأثاث في كافة أحياء شمال الرياض بأسطول دينا مقفل وفنيين متخصصين وتغطية سريعة خلال 30 دقيقة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/north-riyadh/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-600 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    أرقى الفلل
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-almalqa/" class="hover:text-secondary transition-colors">نقل عفش حي الملقا</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                نقل الفلل والقصور الفاخرة بطريقي الملك سلمان وأنس بن مالك، حماية التحف والأثاث المستورد وأوناش رفع هيدروليكية.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-almalqa/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-building-user"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    كثافة عائلية
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alyasamin/" class="hover:text-secondary transition-colors">نقل عفش حي الياسمين</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                خدمات متكاملة للشقق الدوبلكس والفلل المودرن مع فك وتركيب المطابخ وغرف النوم وتغليف الأجهزة الحساسة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alyasamin/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-green-600 to-emerald-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-house-chimney-window"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    مخططات جديدة
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alnarjis/" class="hover:text-secondary transition-colors">نقل عفش حي النرجس</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                نقل أثاث الفلل الجديدة وضاحية خزام، تغليف عازل للغبار وحماية الدهانات والسلالم والأرضيات الرخامية من الخدوش.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alnarjis/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-slate-600 to-slate-800 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    سكني وإداري
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alsahafa/" class="hover:text-secondary transition-colors">نقل عفش حي الصحافة</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                طريق الملك فهد وشارع العليا، نقل أثاث المكاتب والمؤسسات والفلل العائلية مع سيارات دينا مجهزة وسرعة فائقة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alsahafa/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-purple-600 to-indigo-800 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    خدمة VIP
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-hatayn/" class="hover:text-secondary transition-colors">نقل عفش حي حطين</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                محيط البوليفارد ومخرج 2، عناية فائقة بالثريات الكريستالية والمقتنيات الثمينة ونقل فاخر بأعلى درجات الأمان.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-hatayn/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-600 to-blue-800 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-city"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    قرب KAFD
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-aleaqiq/" class="hover:text-secondary transition-colors">نقل عفش حي العقيق</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                بجوار مركز الملك عبدالله المالي، نقل شقق الأبراج والمجمعات العصرية مع أوناش خارجية وتنسيق تصاريح التحميل.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-aleaqiq/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-teal-600 to-teal-800 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-map-pin"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    أقصى الشمال
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alearid/" class="hover:text-secondary transition-colors">نقل عفش حي العارض</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                امتداد طريقي الملك عبدالعزيز وأبو بكر، شاحنات دينا جامبو لنقل محتويات الفلل الكبيرة في رحلة واحدة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alearid/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-500 to-green-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-tree"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    هدوء وفخامة
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alqayrawan/" class="hover:text-secondary transition-colors">نقل عفش حي القيروان</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                غرب طريق الملك فهد وصلبوخ، فلل هادئة ومعدات نقل صامتة ذات عجلات مطاطية لحماية ممرات ومداخل المنازل.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alqayrawan/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="north">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-600 to-pink-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-shield-heart"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    أحياء عريقة
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alrabie/" class="hover:text-secondary transition-colors">نقل عفش حي الربيع</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                قرب مستشفى المملكة وطريق التخصصي، فك وتركيب الأثاث الخشبي الكلاسيكي والتحف الثقيلة بعناية واحترافية.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alrabie/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-700 to-slate-900 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-building"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    عصب العاصمة
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-aleulya/" class="hover:text-secondary transition-colors">نقل عفش حي العليا</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                برج المملكة والفيصلية، نقل مقرات الشركات والمكاتب والشقق الفاخرة بالأبراج مع تنسيق المصاعد ومواقف التحميل.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-aleulya/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-orange-600 to-red-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-house-user"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    عائلات عريقة
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alrawda/" class="hover:text-secondary transition-colors">نقل عفش حي الروضة</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                طريق خريص والدائري الشرقي، نقل الفلل العائلية الكبيرة والمجالس الواسعة بأسطول دينا مجهز وطواقم نجارين.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alrawda/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-600 to-teal-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-arrows-split-up-and-left"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    شرق الرياض
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alkhalij/" class="hover:text-secondary transition-colors">نقل عفش حي الخليج</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                طريق الملك عبدالله والشيخ جابر، فك وتركيب غرف النوم وتغليف الأجهزة الكهربائية بأسعار منافسة وجودة معتمدة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alkhalij/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-600 to-violet-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-table-cells-large"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    مخططات منظمة
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-ishbiliya/" class="hover:text-secondary transition-colors">نقل عفش حي إشبيلية</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                قرب محطة قطار سار وطريق الدمام، نقل أثاث الفلل الدوبلكس والشقق العائلية بأيدي عمالة نظامية متمرسة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-ishbiliya/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-600 to-yellow-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-train-subway"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    شمال شرق
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-almonsiya/" class="hover:text-secondary transition-colors">نقل عفش حي المونسية</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                طريق الدمام السريع والتخصصي، استجابة سريعة للفلل المودرن والتاون هاوس وتوفير كراتين تعبئة مجانية.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-almonsiya/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-yellow-600 to-amber-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-dune"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    مخططات فسيحة
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alrimal/" class="hover:text-secondary transition-colors">نقل عفش حي الرمال</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                الجنادرية والواحة والتعمير، سيارات دينا مقفلة لحماية الأثاث من الغبار، ونقل الفلل والاستراحات الواسعة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alrimal/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-green-600 to-emerald-800 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-hand-holding-dollar"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    باقات اقتصادية
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/areas/hayu-alnasim/" class="hover:text-secondary transition-colors">نقل عفش حي النسيم</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                النسيم الغربي والشرقي وشارع سعد بن أبي وقاص، نقل سريع وأسعار اقتصادية تناسب ميزانيتك مع الحفاظ التام على الأثاث.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/areas/hayu-alnasim/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-700 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-compass-drafting"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    تغطية الشرق
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/east-riyadh-moving/" class="hover:text-secondary transition-colors">نقل عفش شرق الرياض</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                خدمة متكاملة تغطي كافة أحياء شرق الرياض (الروضة، الخليج، إشبيلية، النسيم، المونسية، الرمال، واليرموك).
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/east-riyadh-moving/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="area-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary flex flex-col justify-between group" data-category="east-central">
+        <div>
+            <!-- Header: Icon & Category Badge -->
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-slate-700 to-slate-900 text-white flex items-center justify-center text-2xl shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-map"></i>
+                </div>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20">
+                    تغطية الغرب
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-primary mb-2.5 group-hover:text-secondary transition-colors">
+                <a href="/west-riyadh-moving/" class="hover:text-secondary transition-colors">نقل عفش غرب الرياض</a>
+            </h3>
+
+            <!-- Summary -->
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                خدمات نقل الأثاث في أحياء غرب الرياض (البديعة، السويدي، ظهرة لبن، وطويق) بسيارات دينا وعمالة ماهرة.
+            </p>
+        </div>
+
+        <!-- Footer: Features & Read More Button -->
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400 font-medium">
+                <i class="fas fa-check-circle text-green-500 ml-1"></i> فك • تغليف • نقل
+            </span>
+            <a href="/west-riyadh-moving/" 
+                class="inline-flex items-center gap-2 text-sm font-bold text-secondary hover:text-amber-700 group-hover:translate-x-[-4px] transition-all">
+                قراءة المزيد <i class="fas fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </div>
+
             </div>
 
           
@@ -816,11 +1659,24 @@
                 btn.classList.add('bg-white', 'text-gray-700');
             });
 
-            // الزر النشط
-            event.target.closest('.filter-btn').classList.remove('bg-white', 'text-gray-700');
-            event.target.closest('.filter-btn').classList.add('bg-secondary', 'text-white', 'shadow-md');
+            if (event && event.target) {
+                const targetBtn = event.target.closest('.filter-btn');
+                if (targetBtn) {
+                    targetBtn.classList.remove('bg-white', 'text-gray-700');
+                    targetBtn.classList.add('bg-secondary', 'text-white', 'shadow-md');
+                }
+            }
 
-            renderAreaCards(category);
+            // إظهار وإخفاء الكروت المعروضة في الصفحة
+            const cards = document.querySelectorAll('.area-card');
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         }
 
         // Contact Modal Controls
