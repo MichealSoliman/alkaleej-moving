@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // components.js (centralized navbar manager) builds the same dropdown; running both
+    // produced two nested dropdown menus on every page. Defer to components.js when present.
+    if (document.querySelector('script[src*="components.js"]')) return;
+
     // 1. Define all root-level services (files/folders next to index.html)
     const services = [
-        { name: "نقل عفش بالرياض", path: "best-furniture-moving-company-riyadh/" },
         { name: "تغليف الأثاث بالرياض", path: "furniture-packing-in-riyadh/" },
         { name: "تخزين الأثاث بالرياض", path: "furniture-storage-in-riyadh/" },
         { name: "دينا نقل عفش بالرياض", path: "furniture-moving-truck-in-riyadh/" },

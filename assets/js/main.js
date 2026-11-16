@@ -174,39 +174,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('modal-name').value,
-                phone: document.getElementById('modal-phone').value,
-                address: document.getElementById('modal-address').value,
-                service: document.getElementById('modal-service').value,
-                details: document.getElementById('modal-details').value,
-                timestamp: new Date().toISOString()
-            };
-            
-            if (!validateForm(formData)) {
-                return;
-            }
-            
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin ml-2"></i> جاري الإرسال...';
-            submitBtn.disabled = true;
-            
-            setTimeout(function() {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                closeContactModal();
-                showSuccessToast();
-                form.reset();
-                trackEvent('form_submitted', formData);
-            }, 1500);
-        });
-    }
+    if (!form) return;
+    form.dataset.leadBound = '1';
+    const val = id => { const el = document.getElementById(id); return el ? el.value : ''; };
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = { name: val('modal-name'), phone: val('modal-phone'), address: val('modal-address'), service: val('modal-service'), details: val('modal-details') };
+        if (!validateForm(formData)) return;
+        window.sendLeadToWhatsApp(form);
+        closeContactModal();
+        showSuccessToast();
+        form.reset();
+        trackEvent('form_submitted', { service: formData.service });
+    });
 }
 
 function validateForm(formData) {
@@ -222,12 +202,12 @@ function validateForm(formData) {
         return false;
     }
     
-    if (formData.address.trim().length < 5) {
+    if (document.getElementById('modal-address') && formData.address.trim().length < 3) {
         alert('الرجاء إدخال عنوان صحيح');
         return false;
     }
     
-    if (!formData.service) {
+    if (document.getElementById('modal-service') && !formData.service) {
         alert('الرجاء اختيار نوع الخدمة');
         return false;
     }
@@ -415,3 +395,22 @@ function initTestimonials() {
 }
 
 console.log('%c✨ شركة الخليج لنقل العفش والمكيفات بالرياض', 'color: #F59E0B; font-size: 16px; font-weight: bold;');
+
+// ========================================
+// Lead forms → WhatsApp (no backend exists; previously forms faked success and discarded the lead)
+// ========================================
+window.sendLeadToWhatsApp = function (form) {
+    var lines = ['مرحباً شركة الخليج، أرغب في طلب خدمة:'];
+    form.querySelectorAll('input, select, textarea').forEach(function (el) {
+        if (!el.value || el.type === 'submit' || el.type === 'hidden' || el.type === 'button') return;
+        var wrap = el.closest('div'); var lbl = wrap ? wrap.querySelector('label') : null;
+        var name = (lbl ? lbl.textContent : (el.getAttribute('aria-label') || el.placeholder || el.name || '')).replace(/\*/g, '').trim();
+        lines.push('- ' + name + ': ' + String(el.value).trim());
+    });
+    lines.push('- الصفحة: ' + window.location.href);
+    var url = 'https://wa.me/966503430106?text=' + encodeURIComponent(lines.join('\n'));
+    if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'whatsapp_form' }); }
+    var w = window.open(url, '_blank');
+    if (!w) { window.location.href = url; }
+    return true;
+};

@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Development and Scratch Scripts
+scratch/
+.vscode/
+package.json
+package-lock.json
+tailwind.config.js
+postcss.config.js
+
+# Build artifacts
+dist/temp/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# SEO audit backups (full site copies - never deploy)
+_seo/backup-*

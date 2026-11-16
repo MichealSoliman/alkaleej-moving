@@ -9,7 +9,6 @@
 
   // Define Services list for the Mega Dropdown & Mobile Menu
   const SERVICES_LIST = [
-    { name: "نقل عفش بالرياض", path: "/best-furniture-moving-company-riyadh/" },
     { name: "تغليف الأثاث بالرياض", path: "/furniture-packing-in-riyadh/" },
     { name: "تخزين الأثاث بالرياض", path: "/furniture-storage-in-riyadh/" },
     { name: "دينا نقل عفش بالرياض", path: "/furniture-moving-truck-in-riyadh/" },
@@ -124,6 +123,14 @@
     const container = document.getElementById('site-navbar');
     if (!container) return;
 
+    if (container.children.length > 0) {
+      // Content already statically baked into HTML
+      initNavbarInteractions();
+      initServicesDropdown();
+      initActiveNavigation();
+      return;
+    }
+
     let html = await fetchComponent('navbar.html');
     if (html) {
       // Adjust all links & assets according to current page's location
@@ -138,7 +145,7 @@
   // Load Footer
   async function loadFooter() {
     const container = document.getElementById('site-footer');
-    if (!container) return;
+    if (!container || container.children.length > 0) return;
 
     let html = await fetchComponent('footer.html');
     if (html) {
