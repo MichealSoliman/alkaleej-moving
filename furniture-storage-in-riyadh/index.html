@@ -39,9 +39,9 @@
   <meta name="theme-color" content="#1e293b" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="../dist/output.css">
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/all.min.css">
+  <link rel="stylesheet" href="../dist/output.css?v=20261119">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261119" />
+  <link rel="stylesheet" href="../assets/css/all.min.css?v=20261119">
 
   <!-- JSON-LD Schema: SelfStorage + Service + WebPage + Breadcrumb + FAQ -->
   <script type="application/ld+json">
@@ -398,12 +398,18 @@
   <a href="#main-content" class="skip-to-main">الانتقال إلى المحتوى الرئيسي</a>
 
   <!-- Floating CTAs -->
-  <a href="tel:0503430106" class="float-call-btn no-link-style" aria-label="اتصل بنا">
-    <i class="fas fa-phone-alt"></i>
+  <!-- Floating Call Button -->
+  <a href="tel:+966503430106"
+    class="fixed bottom-28 left-6 z-50 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+    aria-label="اتصل بنا">
+    <i class="fas fa-phone-alt text-2xl"></i>
   </a>
-  <a href="https://wa.me/966503430106?text=مرحباً، أرغب في الاستفسار عن تخزين عفش بالرياض" target="_blank"
-    class="float-whatsapp-btn no-link-style" aria-label="تواصل عبر الواتساب">
-    <i class="fab fa-whatsapp"></i>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/966503430106?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%AE%D8%B2%D9%8A%D9%86%20%D8%B9%D9%81%D8%B4%20%D8%A8%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 left-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110"
+    aria-label="تواصل عبر واتساب">
+    <i class="fab fa-whatsapp text-3xl"></i>
   </a>
 
   <!-- Header / Navigation -->
@@ -2264,8 +2270,8 @@
     });
   </script>
 
-  <script src="../assets/js/services-dropdown.js" defer></script>
-  <script src="../assets/js/components.js" defer></script>
+  <script src="../assets/js/services-dropdown.js?v=20261119" defer></script>
+  <script src="../assets/js/components.js?v=20261119" defer></script>
 </body>
 
 </html>
